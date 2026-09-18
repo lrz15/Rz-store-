@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RZ STORE | منظم المقعد الخلفي الفاخر</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- خط Google Font للغة العربية -->
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <!-- أيقونات FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- الهيدر والترويسة -->
+    <header class="header">
+        <div class="logo-area">
+            <h1>RZ STORE</h1>
+            <p>CAR INTERIOR ELEGANCE</p>
+        </div>
+        
+        <!-- شريط التصفح والطلب السريع -->
+        <div class="search-bar-container">
+            <div class="search-item">
+                <span class="label">نوع الخامة</span>
+                <span class="value">جلد فاخر <i class="fa-solid fa-chevron-down"></i></span>
+            </div>
+            <div class="divider"></div>
+            <div class="search-item">
+                <span class="label">اللون المحدد</span>
+                <span class="value" id="header-color-value">أسود ملكي <i class="fa-solid fa-chevron-down"></i></span>
+            </div>
+            <div class="divider"></div>
+            <div class="search-item">
+                <span class="label">السعر</span>
+                <span class="value">$35.00</span>
+            </div>
+            <button class="search-btn"><i class="fa-solid fa-cart-shopping"></i> اطلب الآن</button>
+        </div>
+    </header>
+
+    <!-- شريط الأقسام / الفلاتر -->
+    <nav class="category-nav">
+        <span class="nav-item">جلد فاخر</span>
+        <span class="nav-item">حامل أجهزة</span>
+        <span class="nav-item active">منظم المقعد</span>
+        <span class="nav-item">مقاوم للماء</span>
+        <span class="nav-item">تركيب سريع</span>
+    </nav>
+
+    <!-- المعرض الرئيسي للمنتج (Hero Showcase) -->
+    <main class="showcase">
+        <!-- كارت جانبية فرعية -->
+        <div class="side-card">
+            <div class="card-image">
+                <img src="black.jpg" alt="RZ Store Organizer Detail">
+            </div>
+            <div class="card-info">
+                <h3>تصميم مدمج</h3>
+                <p>يناسب جميع أنواع السيارات</p>
+            </div>
+        </div>
+
+        <!-- الكارت الرئيسية للمنتج -->
+        <div class="main-card">
+            <div class="badge-container">
+                <span class="price-tag">$35.00</span>
+                <span class="deal-tag">RZ STORE SPECIAL</span>
+                <span class="quality-tag"><i class="fa-solid fa-star" style="color: #d9822b;"></i> 4.9</span>
+            </div>
+            <h2 class="product-title">منظم المقعد الخلفي الجلدي</h2>
+            
+            <!-- مربع الصورة الرئيسية -->
+            <div class="main-image-box">
+                <img id="main-product-img" src="black.jpg" alt="منظم السيارة الجلدي من RZ STORE">
+            </div>
+
+            <!-- أزرار اختيار اللون -->
+            <div class="color-selector">
+                <span class="color-label">اللون المحدد: <strong id="selected-color-text">أسود ملكي</strong></span>
+                <div class="color-options">
+                    <!-- زر اللون الأسود -->
+                    <button class="color-btn active" style="background-color: #1a1a1a;" onclick="changeColor('black.jpg', 'أسود ملكي', this)" title="أسود ملكي"></button>
+                    <!-- زر اللون البيج -->
+                    <button class="color-btn" style="background-color: #d2b48c;" onclick="changeColor('beige.jpg', 'بيج فاخر', this)" title="بيج فاخر"></button>
+                    <!-- زر اللون البني -->
+                    <button class="color-btn" style="background-color: #5c3a21;" onclick="changeColor('brown.jpg', 'بني كلاسيك', this)" title="بني كلاسيك"></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- كارت جانبية ثانية -->
+        <div class="side-card">
+            <div class="card-image">
+                <img src="black.jpg" alt="RZ Store Organizer Storage">
+            </div>
+            <div class="card-info">
+                <h3>جيوب متعددة</h3>
+                <p>تنظيم كامل ومتكامل</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- شبكة المميزات والتفاصيل (CATEGORIES & INFORMATION) -->
+    <section class="info-section">
+        <h2 class="section-title">المميزات والتفاصيل</h2>
+        
+        <div class="grid-container">
+            <div class="grid-card">
+                <div class="icon-box"><i class="fa-solid fa-gem"></i></div>
+                <div class="text-box">
+                    <h4>جلد فاخر متناسق</h4>
+                    <p>يتكامل مع الفرش الأصلي للسيارة بأسلوب أنيق</p>
+                </div>
+            </div>
+
+            <div class="grid-card">
+                <div class="icon-box"><i class="fa-solid fa-bottle-water"></i></div>
+                <div class="text-box">
+                    <h4>حامل أكواب مزدوج</h4>
+                    <p>جيبان جانبيان لتثبيت الزجاجات والمطارات</p>
+                </div>
+            </div>
+
+            <div class="grid-card">
+                <div class="icon-box"><i class="fa-solid fa-box-archive"></i></div>
+                <div class="text-box">
+                    <h4>حافظة مناديل مدمجة</h4>
+                    <p>جيب أوسط مغلق بغطاء أنيق لعلب المناديل</p>
+                </div>
+            </div>
+
+            <div class="grid-card">
+                <div class="icon-box"><i class="fa-solid fa-mobile-screen"></i></div>
+                <div class="text-box">
+                    <h4>جيوب علوية مخصصة</h4>
+                    <p>حوامل سريعة للهاتف والنظارات الشمسية</p>
+                </div>
+            </div>
+
+            <div class="grid-card">
+                <div class="icon-box"><i class="fa-solid fa-folder-closed"></i></div>
+                <div class="text-box">
+                    <h4>جيب سفلي كبير</h4>
+                    <p>مساحة تخزين واسعة للكتب والتابلت والأوراق</p>
+                </div>
+            </div>
+
+            <div class="grid-card">
+                <div class="icon-box"><i class="fa-solid fa-shield-halved"></i></div>
+                <div class="text-box">
+                    <h4>حماية ظهر المقعد</h4>
+                    <p>يحمي المقاعد الخلفية من الخدوش والاتساخ</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- الفوتر -->
+    <footer class="footer">
+        <p>© 2026 RZ STORE. جميع الحقوق محفوظة.</p>
+    </footer>
+
+    <!-- ربط كود الجافاسكربت -->
+    <script src="script.js"></script>
+</body>
+</html>
